@@ -24,3 +24,15 @@ char	*ft_strcat(char *dest, const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+	char dest[] = "BBBB0000000000000000000000000";
+	char source[] = "AAAAAAAAA";
+	printf("Original \t-> %lu \n", strlcat(dest, source, 6));
+	printf("Fake \t\t-> %zu \n", ft_strlcat(dest, source, 6));	
+}
+*/

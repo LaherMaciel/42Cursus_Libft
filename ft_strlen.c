@@ -21,3 +21,12 @@ size_t	ft_strlen(const char *a)
 		i++;
 	return (i);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+    //char *letras = "Diogo";
+    printf("%zu \n", ft_strlen("123"));
+}
+*/

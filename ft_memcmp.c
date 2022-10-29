@@ -36,11 +36,13 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 }
 
 /*
+#include <string.h>
+#include <stdio.h>
 int main()
 {
-	char s2[] = {'H', 'E', 'L', 'L', 'O'};
-	char s3[] = {'H', 'E', 'L', 'L', 'O'};
-	printf("Original: \t%d \n", memcmp(s2, s3, 4));
-	printf("Fake: \t\t%d \n", ft_memcmp(s2, s3, 4));
+    char s2[] = {0, 0, 127, 0};
+	char s3[] = {0, 0, 42, 0};
+    printf("Original: \t%d \n", memcmp(s2, s3, 4));
+    printf("Fake: \t\t%d \n", ft_memcmp(s2, s3, 4));
 }
 */

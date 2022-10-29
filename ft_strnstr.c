@@ -33,3 +33,13 @@ char	*ft_strnstr(char *big, const char *little, size_t len)
 	}
 	return (0);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	char ponto[] = "cd";
+	char haystack[30] = "aaabcabcd";
+	printf("%s \n", ft_strnstr(haystack, ponto, 6));
+}
+*/

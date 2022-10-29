@@ -24,3 +24,14 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (0);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	char ponto;
+	char texto[] = "www.ditgo.com";
+	ponto = 't';
+	printf("%s \n", ft_strchr(texto, ('t' + 256)));
+}
+*/

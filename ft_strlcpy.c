@@ -26,3 +26,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	i = 0;
 	return (ft_strlen(src));
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+	char dest[] = "";
+	const char source[] = "Diogo0013";
+	printf("Original \t-> %lu \n", strlcpy(dest, source, 1));
+	printf("Fake \t\t-> %zu \n", ft_strlcpy(dest, source, 1));
+}
+*/

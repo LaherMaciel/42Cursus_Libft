@@ -48,3 +48,12 @@ size_t	ft_atoi(const char *str)
 	}
 	return (c * sign);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	char teste[] = "    +13a14";
+	printf("%d \n", ft_atoi(teste));
+}
+*/

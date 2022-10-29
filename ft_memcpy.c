@@ -29,3 +29,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	d[i] = '\0';
 	return (dest);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+    char s2[] = {0, 0, 127, 0};
+	char s3[] = {0, 0, 42, 0};
+    printf("Original: \t%d \n", memcmp(s2, s3, 4));
+    printf("Fake: \t\t%d \n", ft_memcmp(s2, s3, 4));
+}
+*/
