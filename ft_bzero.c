@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:54:54 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 21:00:44 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:35:37 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,5 @@ void	ft_bzero(void *s, size_t n)
 
 	i = -1;
 	while (++i < n)
-	{
 		((unsigned char *) s)[i] = 0;
-	}
 }
