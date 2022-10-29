@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:20:26 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 21:01:28 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:43:54 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isalpha(char c);
 int		ft_isdigit(int i);
 int		ft_tolower(int a);
 int		ft_toupper(int c);
+void	*calloc(size_t n, size_t size);
 size_t	ft_strlen(const char *a);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
