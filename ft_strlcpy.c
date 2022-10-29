@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 20:23:40 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/28 21:10:54 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/10/29 23:14:39 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	}
 	dest[i] = '\0';
-	i = 0;
 	return (ft_strlen(src));
 }
 
