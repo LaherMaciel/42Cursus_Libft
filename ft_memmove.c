@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 19:48:30 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 20:51:20 by lwencesl         ###   ########.fr       */
+/*   Created: 2022/10/29 20:35:24 by lwencesl          #+#    #+#             */
+/*   Updated: 2022/10/29 20:53:08 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
-	size_t			a;
-	unsigned char	*s;
-
-	*s = str;
-	a = 0;
-	while (s[a] == '\0' && a <= n)
-	{
-		if (s[a] == c)
-			return (str + a);
-		a++;
-	}
-	return (0);
+	
+	return (str1);
 }

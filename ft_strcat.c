@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 19:48:30 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 20:51:20 by lwencesl         ###   ########.fr       */
+/*   Created: 2022/10/29 20:39:30 by lwencesl          #+#    #+#             */
+/*   Updated: 2022/10/29 20:52:11 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+char	*ft_strcat(char *dest, const char *src)
 {
-	size_t			a;
-	unsigned char	*s;
+	size_t	i;
+	size_t	d;
 
-	*s = str;
-	a = 0;
-	while (s[a] == '\0' && a <= n)
-	{
-		if (s[a] == c)
-			return (str + a);
-		a++;
-	}
-	return (0);
+	i = -1;
+	d = ft_strlen(dest);
+	while (src[++i] != '\0')
+		dest[d + i] = src[i];
+	dest[i] = '\0';
+	return (dest);
 }
