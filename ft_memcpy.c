@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:50:42 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 20:23:34 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/10/29 20:29:08 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	d[i] = '\0';
 	return (dest);
+	//dadadada<da
 }
