@@ -56,4 +56,5 @@ int main()
 	char teste[] = "    +13a14";
 	printf("%d \n", ft_atoi(teste));
 }
+
 */
