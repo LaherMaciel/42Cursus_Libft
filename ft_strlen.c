@@ -26,7 +26,7 @@ size_t	ft_strlen(const char *a)
 #include <stdio.h>
 int main()
 {
-    //char *letras = "Diogo";
+    //char *letras = "Laher";
     printf("%zu \n", ft_strlen("123"));
 }
 */

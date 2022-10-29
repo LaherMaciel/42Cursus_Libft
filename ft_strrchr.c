@@ -32,7 +32,7 @@ char	*ft_strrchr(const char *str, int c)
 int main()
 {
 	char ponto;
-	char texto[] = "www.diogo.com";
+	char texto[] = "Laher eh o maior";
 	ponto = '.';
 	printf("%s \n", ft_strrchr(texto, ponto));
 }

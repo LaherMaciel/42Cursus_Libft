@@ -30,7 +30,7 @@ char	*ft_strrchr(const char *str, int c)
 int main()
 {
 	char ponto;
-	char texto[] = "www.ditgo.com";
+	char texto[] = "Laher eh o maior";
 	ponto = 't';
 	printf("%s \n", ft_strchr(texto, ('t' + 256)));
 }

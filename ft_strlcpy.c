@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 int main()
 {
 	char dest[] = "";
-	const char source[] = "Diogo0013";
+	const char source[] = "LaherMaciel";
 	printf("Original \t-> %lu \n", strlcpy(dest, source, 1));
 	printf("Fake \t\t-> %zu \n", ft_strlcpy(dest, source, 1));
 }
