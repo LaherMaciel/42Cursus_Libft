@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:20:26 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 23:35:31 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/10/31 19:12:39 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*ft_strcat(char *dest, const char *src);
 char	*ft_strnstr(char *big, const char *little, size_t len);
 size_t	ft_atoi(const char *str);
 char	*strdup(const char *s);
-char    *ft_strjoin(char const *s1, char const *s2);
-char    *ft_strtrim(char const *s1, char const *set);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 void	*ft_memchr(void *str, int c, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

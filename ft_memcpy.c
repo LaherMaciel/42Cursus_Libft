@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:50:42 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 20:29:08 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/10/31 19:24:58 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 	size_t			i;
 
-	*d = dest;
-	*s = src;
+	d = (unsigned char *) dest;
+	s = (unsigned char *) src;
 	i = 0;
 	while (s[i] != '\0' && i <= n)
 	{
