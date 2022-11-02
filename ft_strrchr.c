@@ -19,10 +19,10 @@ char	*ft_strrchr(const char *str, int c)
 	a = 0;
 	while (str[a] != '\0')
 		a++;
-	while (a-- >= 0)
+	while (a-- > 0)
 	{
 		if (str[a] == c)
-			return (str + a);
+			return ((char *)str + a);
 	}
 	return (0);
 }

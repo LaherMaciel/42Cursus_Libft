@@ -39,11 +39,11 @@ size_t	ft_atoi(const char *str)
 	{
 		c = c * 10 + (str[i] - '0');
 		i++;
-		if (c == '922337203685477580' && str[i] >= 7)
+		if (c == INT_MAX && str[i] >= 7)
 		{
 			if (str[i] >= 8 && sign == -1)
-				return (-9223372036854775808);
-			return (9223372036854775807);
+				return (INT_MIN);
+			return (INT_MAX);
 		}
 	}
 	return (c * sign);

@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:20:26 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/31 19:12:39 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:17:08 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_isascii(int a);
 int		ft_isprint(int a);
@@ -32,7 +33,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
-char	*ft_strcat(char *dest, const char *src);
+char	*ft_strlcat(char *dest, const char *src);
 char	*ft_strnstr(char *big, const char *little, size_t len);
 size_t	ft_atoi(const char *str);
 char	*strdup(const char *s);

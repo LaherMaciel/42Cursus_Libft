@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 22:38:25 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 23:17:36 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:20:59 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*strdup(const char *s)
 {
-	unsigned char	*c;
-	size_t			a;
-	size_t			i;
+	char	*c;
+	size_t	a;
+	size_t	i;
 
 	a = ft_strlen(s);
-	c = (unsigned char *) malloc(a * sizeof(char) + 1);
+	c = (char *) malloc(a * sizeof(char) + 1);
 	if (!c)
 		return (NULL);
 	i = -1;
