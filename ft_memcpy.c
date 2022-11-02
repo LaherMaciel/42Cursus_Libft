@@ -6,38 +6,24 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:50:42 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/31 19:24:58 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:26:19 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			i;
+	char	*d;
+	char	*s;
+	size_t	i;
 
-	d = (unsigned char *) dest;
-	s = (unsigned char *) src;
-	i = 0;
-	while (s[i] != '\0' && i <= n)
-	{
+	d = (char *)dest;
+	s = (char *)src;
+	i = -1;
+	while (++i < n)
 		d[i] = s[i];
-		i++;
-	}
-	d[i] = '\0';
 	return (dest);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-    char s2[] = "Hello World!";
-	char s3[] = "HelLo World?";
-    printf("Original: \t%d \n", memcmp(s2, s3, 4));
-    printf("Fake: \t\t%d \n", ft_memcmp(s2, s3, 4));
-}
-*/

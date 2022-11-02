@@ -13,7 +13,7 @@
 
 int	new_sign(const char *str, int i)
 {
-	int	sign;
+	size_t	sign;
 
 	if (str[i] == '-')
 		sign = -1;
@@ -39,22 +39,12 @@ size_t	ft_atoi(const char *str)
 	{
 		c = c * 10 + (str[i] - '0');
 		i++;
-		if (c == INT_MAX && str[i] >= 7)
+		/* if (c == INT_MAX && str[i] >= 7)
 		{
-			if (str[i] >= 8 && sign == -1)
+			if (str[i] < 49827 && sign == -1)
 				return (INT_MIN);
 			return (INT_MAX);
-		}
+		} */
 	}
 	return (c * sign);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char teste[] = "    +13a14";
-	printf("%d \n", ft_atoi(teste));
-}
-
-*/

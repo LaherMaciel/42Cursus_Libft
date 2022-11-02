@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 20:23:40 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 23:14:39 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:12:29 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i <= size)
+	while (src[i] != '\0' && i < size)
 	{
 		dest[i] = src[i];
 		i++;
@@ -25,15 +25,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char dest[] = "";
-	const char source[] = "LaherMaciel";
-	printf("Original \t-> %lu \n", strlcpy(dest, source, 1));
-	printf("Fake \t\t-> %zu \n", ft_strlcpy(dest, source, 1));
-}
-*/

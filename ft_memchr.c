@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 19:48:30 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/31 19:26:24 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:11:27 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@ void	*ft_memchr(void *str, int c, size_t n)
 	unsigned char	*s;
 
 	s = (unsigned char *)str;
-	a = 0;
-	while (s[a] == '\0' && a <= n)
-	{
+	a = -1;
+	while (++a < n)
 		if (s[a] == c)
 			return (str + a);
-		a++;
-	}
 	return (0);
 }

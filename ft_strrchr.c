@@ -19,21 +19,9 @@ char	*ft_strrchr(const char *str, int c)
 	a = 0;
 	while (str[a] != '\0')
 		a++;
-	while (a-- > 0)
-	{
+	a++;
+	while (--a >= 0)
 		if (str[a] == c)
 			return ((char *)str + a);
-	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char ponto;
-	char texto[] = "Laher eh o maior";
-	ponto = '.';
-	printf("%s \n", ft_strrchr(texto, ponto));
-}
-*/
