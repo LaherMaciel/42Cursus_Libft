@@ -11,12 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	new_sign(const char *str, int i)
+int	new_sign(const char *str, int i, int sign)
 {
-	size_t	sign;
-
 	if (str[i] == '-')
-		sign = -1;
+		sign = sign * (- 1);
 	return (sign);
 }
 
@@ -26,25 +24,26 @@ size_t	ft_atoi(const char *str)
 	int		sign;
 	size_t	c;
 
+	sign = 1;
 	c = 0;
 	i = 0;
-	while (str[i] >= 9 && str[i] == 32)
+	while ((str[i] >= 8 && str[i] <= 32))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
-		sign = new_sign(str, i);
+		sign = new_sign(str, i, sign);
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		c = c * 10 + (str[i] - '0');
+		c = (c * 10) + (str[i] - '0');
 		i++;
-		/* if (c == INT_MAX && str[i] >= 7)
+		if (c == 922337203685477580 && str[i] >= 7)
 		{
-			if (str[i] < 49827 && sign == -1)
-				return (INT_MIN);
-			return (INT_MAX);
-		} */
+			if (c == 922337203685477580 && sign == -1)
+				return (-9223372036854775807);
+			return (9223372036854775807);
+		}
 	}
 	return (c * sign);
 }
