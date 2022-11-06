@@ -31,6 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	d[i] = '\0';
-	
+
 	return (d);
 }
