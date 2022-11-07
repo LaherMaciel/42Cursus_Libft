@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:35:01 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/07 21:21:43 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/07 21:22:15 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ size_t	ft_fim(char const *src, char const *set, size_t set_size)
 	return (g - d);
 }
  */
+
 char	*ft_strtrim(char const *src, char const *set)
 {
 	size_t	i;
@@ -71,8 +72,10 @@ char	*ft_strtrim(char const *src, char const *set)
 	size_t	s;
 	char	*trim;
 
+	/*
 	j = ft_in(src, set, ft_strlen(set));
-	s = ft_fim(src, set, ft_strlen(set)) - j;
+	s = ft_fim(src, set, ft_strlen(set)) - j; 
+	*/
 	trim = (char *) malloc(s * sizeof(char) + 1);
 	if (!trim)
 		return (NULL);
