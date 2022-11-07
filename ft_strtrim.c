@@ -6,37 +6,80 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:35:01 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/07 20:15:41 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/07 21:21:43 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strtrim(char const *s1, char const *set)
+/* 
+size_t	ft_in(char const *src, char const *set, size_t set_size)
 {
+	size_t	i;
 	size_t	j;
 	size_t	d;
+
+	d = 0;
+	i = 0;
+	while (i < set_size)
+	{
+		j = 0;
+		while (j < set_size)
+		{
+			if (set[j] == src[i])
+			{
+				d++;
+				break ;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (d);
+}
+
+size_t	ft_fim(char const *src, char const *set, size_t set_size)
+{
 	size_t	i;
+	size_t	j;
+	size_t	d;
+	size_t	g;
+
+	i = 0;
+	g = ft_strlen(src);
+	d = 0;
+	while (i <= set_size)
+	{
+		j = 0;
+		while (j < set_size)
+		{
+			if (src[g - i] == set[j])
+			{
+				d++;
+				break ;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (g - d);
+}
+ */
+char	*ft_strtrim(char const *src, char const *set)
+{
+	size_t	i;
+	size_t	j;
 	size_t	s;
 	char	*trim;
 
-	d = ft_strlen(s1) + 1;
-	s = ft_strlen(set);
-	j = 0;
-	while (set[j] == s1[j])
-		j++;
-	while (set[s] == s1[d])
-	{
-		d--;
-		s--;
-	}
-	trim = (char *) malloc((d - j) * sizeof(char) + 1);
+	j = ft_in(src, set, ft_strlen(set));
+	s = ft_fim(src, set, ft_strlen(set)) - j;
+	trim = (char *) malloc(s * sizeof(char) + 1);
 	if (!trim)
 		return (NULL);
 	i = 0;
-	while (j < d)
+	while (i < s)
 	{
-		trim[i] = s1[j];
+		trim[i] = src[j];
 		i++;
 		j++;
 	}
