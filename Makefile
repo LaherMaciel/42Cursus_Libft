@@ -6,7 +6,7 @@
 #    By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 18:07:37 by lwencesl          #+#    #+#              #
-#    Updated: 2022/10/31 19:29:50 by lwencesl         ###   ########.fr        #
+#    Updated: 2022/11/07 19:58:27 by lwencesl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
 ft_substr\
 ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
 ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
-ft_strjoin\
+ft_strjoin ft_strtrim\
 
 CC = gcc
 RM = rm -f
