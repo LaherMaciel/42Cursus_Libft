@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 13:08:08 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/31 13:08:08 by marvin           ###   ########.fr       */
+/*   Created: 2022/11/07 18:35:01 by lwencesl          #+#    #+#             */
+/*   Updated: 2022/11/07 18:36:00 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char    *ft_strtrim(char const *s1, char const *set)
 {
-    
+    size_t
 }

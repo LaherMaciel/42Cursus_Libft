@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:35:50 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/28 21:05:15 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/07 18:14:29 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,3 @@ size_t	ft_strlen(const char *a)
 		i++;
 	return (i);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-    //char *letras = "Laher";
-    printf("%zu \n", ft_strlen("123"));
-}
-*/
