@@ -14,7 +14,7 @@
 int	new_sign(const char *str, int i, int sign)
 {
 	if (str[i] == '-')
-		sign = sign * (- 1);
+		sign = sign * (-1);
 	return (sign);
 }
 
