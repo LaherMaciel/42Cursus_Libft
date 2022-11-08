@@ -12,83 +12,52 @@
 
 #include "libft.h"
 
-size_t	ft_in(char const *src, char const *set, size_t set_size)
+int	ft_in(char c, const char *set)
 {
 	size_t	i;
-	size_t	j;
-	size_t	d;
-	size_t	w;
-
-	d = 0;
-	i = 0;
-	while (src[i] != '\0')
-	{
-		j = 0;
-		w = d;
-		while (j < set_size)
-		{
-			if (src[i] == set[j])
-			{
-				d++;
-				break ;
-			}
-			j++;
-		}
-		i++;
-		if (w == d)
-			break ;
-	}
-	return (d);
-}
-
-size_t	ft_fim(char const *src, char const *set, size_t set_size)
-{
-	size_t	i;
-	size_t	j;
-	size_t	d;
-	size_t	g;
-	size_t	w;
 
 	i = -1;
-	g = ft_strlen(src);
-	d = 0;
-	while (src[++i] != '\0')
-	{
-		j = -1;
-		w = d;
-		while (++j < set_size)
-		{
-			if (src[g - i] == set[j])
-			{
-				d++;
-				break ;
-			}
-		}
-		if (w == d)
-			break ;
-	}
-	return (g - d);
+	while (set[++i])
+		if (c == set[i])
+			return (1);
+	return (0);
 }
 
-char	*ft_strtrim(char const *src, char const *set)
+size_t	ft_getsize(const char *str, const char *set)
 {
+	size_t	size;
 	size_t	i;
-	size_t	j;
-	size_t	s;
-	char	*trim;
 
-	j = ft_in(src, set, ft_strlen(set));
-	s = ft_fim(src, set, ft_strlen(set)) - j;
-	trim = (char *) malloc(s * sizeof(char) + 1);
+	size = ft_strlen(str);
+	i = 0;
+	while (ft_in(str[i], set) != 0 && str[i])
+		i++;
+	if (i == size)
+		return (0);
+	while (ft_in(str[size - 1], set) != 0)
+		size --;
+	return (size - i);
+}
+
+char	*ft_strtrim(const char *str, const char *set)
+{
+	size_t		size;
+	char		*trim;
+	size_t		i;
+	size_t		j;
+
+	if (!str)
+		return (NULL);
+	size = ft_getsize(str, set);
+	trim = (char *)malloc(size * sizeof(char) + 1);
 	if (!trim)
 		return (NULL);
+	trim[size] = '\0';
 	i = 0;
-	while (i < s)
-	{
-		trim[i] = src[j];
+	j = -1;
+	while (ft_in(str[i], set) && str[i])
 		i++;
-		j++;
-	}
-	trim[i] = '\0';
+	while (++j < size)
+		trim[j] = str[i + j];
 	return (trim);
 }
