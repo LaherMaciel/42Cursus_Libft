@@ -10,15 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-size_t	*ft_pos_search(const char *str, int c)
+size_t	ft_pos_search(const char *str, int c)
 {
 	size_t	a;
 
 	a = -1;
 	while (++a <= ft_strlen(str))
 		if (str[a] == c)
+			return (a);
+	return (-1);
+}
+
+size_t	ft_skip(const char *str, int c)
+{
+	size_t	a;
+
+	a = -1;
+	while (++a < ft_strlen(str))
+		if (str[a] != c)
 			return (a);
 	return (-1);
 }
@@ -30,13 +41,16 @@ size_t	find_size(const char *s, char c)
 	size_t	i;
 
 	start = 0;
-	i = -1;
+	i = 0;
 	sep = 0;
-	while (sep != -1)
+	while (sep != (size_t) -1)
 	{
-		i++;
+		if (ft_skip(s + (start + sep), c) != (size_t) - 1)
+			start = start + sep + ft_skip(s + (start + sep), c);
+		else if (ft_skip(s + (start + sep), c) == (size_t) - 1)
+			break ;
 		sep = ft_pos_search((s + start), c);
-		start = start + sep + 1;
+		i++;
 	}
 	return (i);
 }
@@ -48,28 +62,29 @@ char	**ft_terminator(const char *s, char c, char **splited)
 	size_t	i;
 
 	start = 0;
-	i = -1;
+	i = 0;
 	sep = 0;
-	while (sep != -1)
+	while (sep != (size_t) -1)
 	{
-		i++;
+		if (ft_skip(s + (start + sep), c) != (size_t) - 1)
+			start = start + sep + ft_skip(s + (start + sep), c);
+		else if (ft_skip(s + (start + sep), c) == (size_t) - 1)
+			break ;
 		sep = ft_pos_search((s + start), c);
-		if (sep != -1)
+		if (sep != (size_t) - 1)
 			splited[i] = ft_substr(s, start, sep);
-		else if (sep == -1)
+		else if (sep == (size_t) - 1)
 			splited[i] = ft_substr(s, start, ft_strlen(s + start));
-		start = start + sep + 1;
+		i++;
 	}
+	splited[i] = '\0';
 	return (splited);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**splited;
-	size_t	*sep;
 
-	if (s == '\0')
-		return (NULL);
 	splited = (char **) malloc(find_size(s, c) * sizeof(char *) + 1);
 	if (!splited)
 		return (NULL);
