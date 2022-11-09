@@ -28,6 +28,7 @@ int		ft_tolower(int a);
 int		ft_toupper(int c);
 void	ft_bzero(void *s, size_t n);
 void	*calloc(size_t n, size_t size);
+char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *a);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
