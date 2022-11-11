@@ -85,7 +85,10 @@ char	**ft_split(char const *s, char c)
 {
 	char	**splited;
 
-	splited = (char **) malloc(find_size(s, c) * sizeof(char *) + 1);
+	if (s[0] == '\0')
+		splited = (char **) malloc(sizeof(char *));
+	else
+		splited = (char **) malloc(find_size(s, c) * sizeof(char *) + 1);
 	if (!splited)
 		return (NULL);
 	return (ft_terminator(s, c, splited));
