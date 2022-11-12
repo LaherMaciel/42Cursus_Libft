@@ -48,4 +48,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
 #endif
