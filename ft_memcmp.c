@@ -33,15 +33,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-    char s2[] = "Hello World!";
-	char s3[] = "HelLo World?";
-    printf("Original: \t%d \n", memcmp(s2, s3, 4));
-    printf("Fake: \t\t%d \n", ft_memcmp(s2, s3, 4));
-}
-*/
