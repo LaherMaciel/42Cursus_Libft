@@ -26,5 +26,4 @@ void	*ft_memchr(void *str, int c, size_t n)
 		a++;
 	}
 	return (0);
-	
 }
