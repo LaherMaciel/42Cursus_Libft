@@ -64,12 +64,3 @@ char	*ft_itoa(int n)
 	ito[size] = '\0';
 	return (ito);
 }
-
-/*int	main(void)
-{
-	size_t n = 1231209381;
-	//printf("div: \t%ld \n",count_digits(-1234567890));
-	printf("Numero  %ld -> \t%s \n", n, ft_itoa(n));
-	//printf("Numero -13 -> \t%s \n", ft_itoa(0));
-	return (0);
-}*/

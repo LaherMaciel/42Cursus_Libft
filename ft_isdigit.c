@@ -18,30 +18,3 @@ int	ft_isdigit(int i)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	int		a;
-	char	c;
-
-	a = -10;
-	while (a++ < 142)
-	{
-		c = ft_isdigit(a);
-		if (c != 0)
-		{
-			if (ft_isdigit(a - 1) == 0)
-				write (1, "\n\n", 2);
-			write (1, &a, 1);
-		}
-		else
-		{
-			if (ft_isdigit(a - 1) != 0)
-				write (1, "\n", 2);
-			write (1, "NUll", 4);
-		}
-	}
-	return (0);
-}
-*/

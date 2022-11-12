@@ -11,12 +11,12 @@
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_memset ft_bzero ft_memcpy ft_memchr ft_putchar_fd\
-ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\
-ft_substr ft_split ft_itoa ft_strmapi ft_striteri ft_putstr_fd\
-ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
-ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
-ft_strjoin ft_strtrim ft_putendl_fd ft_putnbr_fd\
+SRC = ft_atoi ft_bzero ft_calloc ft_isalnum ft_isalpha ft_isascii\
+ft_isdigit ft_isprint ft_itoa ft_memchr ft_memcmp ft_memcpy\
+ft_memmove ft_memset ft_putchar_fd ft_putendl_fd ft_putnbr_fd\
+ft_putstr_fd ft_split ft_strchr ft_strdup ft_striteri ft_strjoin\
+ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr\
+ft_strrchr ft_strtrim ft_substr ft_tolower ft_toupper\
 
 CC = gcc
 RM = rm -f

@@ -45,12 +45,12 @@ size_t	find_size(const char *s, char c)
 	sep = 0;
 	while (sep != (size_t) -1)
 	{
+		i++;
 		if (ft_skip(s + (start + sep), c) != (size_t) - 1)
 			start = start + sep + ft_skip(s + (start + sep), c);
 		else if (ft_skip(s + (start + sep), c) == (size_t) - 1)
 			break ;
 		sep = ft_pos_search((s + start), c);
-		i++;
 	}
 	return (i);
 }
