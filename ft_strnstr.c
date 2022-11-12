@@ -17,15 +17,15 @@ char	*ft_strnstr(char *big, const char *little, size_t len)
 	size_t	a;
 	size_t	b;
 
-	a = 0;
-	b = 0;
 	if (little[0] == '\0')
 		return (big);
-	if (len == 0)
+	if (len <= 0)
 		return (NULL);
-	while (big[a] != '\0' && a < len)
+	a = 0;
+	b = 0;
+	while (big[a] && a < len)
 	{
-		if (big[a] == little[b])
+		if (((unsigned char *)big)[a] == ((unsigned char *)little)[b])
 			b++;
 		else
 			b = 0;
@@ -33,5 +33,5 @@ char	*ft_strnstr(char *big, const char *little, size_t len)
 			return (big + (a - (b - 1)));
 		a++;
 	}
-	return (0);
+	return (NULL);
 }

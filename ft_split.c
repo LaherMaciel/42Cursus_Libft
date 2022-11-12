@@ -41,7 +41,7 @@ size_t	find_size(const char *s, char c)
 	size_t	i;
 
 	start = 0;
-	i = 0;
+	i = 1;
 	sep = 0;
 	while (sep != (size_t) -1)
 	{
@@ -85,10 +85,10 @@ char	**ft_split(char const *s, char c)
 {
 	char	**splited;
 
-	if (s[0] == '\0')
+	if (!s)
 		splited = (char **) malloc(sizeof(char *));
 	else
-		splited = (char **) malloc(find_size(s, c) * sizeof(char *) + 1);
+		splited = (char **) malloc((find_size(s, c)) * sizeof(char *));
 	if (!splited)
 		return (NULL);
 	return (ft_terminator(s, c, splited));
