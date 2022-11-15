@@ -6,7 +6,7 @@
 #    By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 18:07:37 by lwencesl          #+#    #+#              #
-#    Updated: 2022/11/07 19:58:27 by lwencesl         ###   ########.fr        #
+#    Updated: 2022/11/15 17:40:14 by lwencesl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,12 @@ ft_putstr_fd ft_split ft_strchr ft_strdup ft_striteri ft_strjoin\
 ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr\
 ft_strrchr ft_strtrim ft_substr ft_tolower ft_toupper\
 
-B_SRCS = ft_lstnew ft_lstadd_front\
+B_SRCS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
+ft_lstadd_back ft_lstdelone \
 
 CC = gcc
 RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -I.
+CFLAGS = -Wall -Werror -Wextra
 
 
 all:$(NAME)
