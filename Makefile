@@ -18,8 +18,8 @@ ft_putstr_fd ft_split ft_strchr ft_strdup ft_striteri ft_strjoin\
 ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr\
 ft_strrchr ft_strtrim ft_substr ft_tolower ft_toupper\
 
-B_SRCS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
-ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter\
+B_SRCS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast\
+ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter ft_lstmap\
 
 CC = gcc
 RM = rm -f
