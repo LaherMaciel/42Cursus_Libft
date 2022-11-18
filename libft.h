@@ -6,7 +6,7 @@
 /*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:20:26 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/18 00:39:48 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/18 00:54:26 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t n, size_t size);
 int		ft_isalnum(int a);
-int		ft_isalpha(char c);
+int		ft_isalpha(int c);
 int		ft_isascii(int a);
 int		ft_isdigit(int i);
 int		ft_isprint(int a);
