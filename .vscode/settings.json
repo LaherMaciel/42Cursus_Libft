@@ -29,5 +29,8 @@
     "**/.vscode/**"
   ],
   "C_Cpp.errorSquiggles": "Disabled",
-  "42header.email": ""
+  "42header.email": "",
+  "files.associations": {
+    "stdio.h": "c"
+  }
 }
