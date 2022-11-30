@@ -29,7 +29,7 @@ size_t	count_digits(long int n)
 	return (i);
 }
 
-char	*writhing(long int n, char *ito, size_t size)
+char	*writing(long int n, char *ito, size_t size)
 {
 	if (n < 0)
 	{
@@ -46,7 +46,7 @@ char	*writhing(long int n, char *ito, size_t size)
 	else
 	{
 		ito[size] = n % 10 + 48;
-		ito = writhing(n / 10, ito, size - 1);
+		ito = writing(n / 10, ito, size - 1);
 	}
 	return (ito);
 }
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 	ito = (char *) malloc(size * sizeof(char) + 1);
 	if (!ito)
 		return (NULL);
-	ito = writhing(n, ito, size - 1);
+	ito = writing(n, ito, size - 1);
 	ito[size] = '\0';
 	return (ito);
 }
