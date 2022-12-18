@@ -22,7 +22,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (len <= 0)
 		return (NULL);
 	a = 0;
-	b = 0;
 	while (big[a])
 	{
 		b = 0;
