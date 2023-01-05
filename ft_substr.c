@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lwencesl <lwencesl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 23:21:40 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/10/29 23:33:56 by lwencesl         ###   ########.fr       */
+/*   Updated: 2023/01/05 19:49:16 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	a;
-	char	*d;
+	size_t	cont;
+	char	*dest;
 
-	a = 0;
-	while ((start + a) < ft_strlen(s) && a < len)
-		a++;
-	d = (char *) malloc(a * sizeof(char) + 1);
-	if (!d)
+	cont = 0;
+	while ((start + cont) < ft_strlen(s) && cont < len)
+		cont++;
+	dest = (char *) malloc(cont * sizeof(char) + 1);
+	if (!dest)
 		return (NULL);
-	a = 0;
-	while ((start + a) < ft_strlen(s) && a < len)
+	cont = 0;
+	while ((start + cont) < ft_strlen(s) && cont < len)
 	{
-		d[a] = s[start + a];
-		a++;
+		dest[cont] = s[start + cont];
+		cont++;
 	}
-	d[a] = '\0';
-	return (d);
+	dest[cont] = '\0';
+	return (dest);
 }
